@@ -39,4 +39,9 @@ public class DeadLock {
             }
         }, "bb").start();
     }
+    /**
+     * jps -l
+     * jstack 进程编号
+     * jconsole
+     */
 }

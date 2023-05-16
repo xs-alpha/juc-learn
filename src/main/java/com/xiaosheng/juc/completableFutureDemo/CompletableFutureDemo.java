@@ -1,10 +1,7 @@
 package com.xiaosheng.juc.completableFutureDemo;
 
 import java.util.EmptyStackException;
-import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.Executors;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.*;
 
 /**
  * @author xiaosheng
@@ -29,9 +26,13 @@ public class CompletableFutureDemo {
             System.out.println(Thread.currentThread().getName() + "completableFuture1");
             return 900;
         });
+        // t是返回值，u是异常
         integerCompletableFuture.whenComplete((t, u) -> {
             System.out.println("---t:" + t);
             System.out.println("---u:" + u);
         }).get();
+
+        //--------------------------
+
     }
 }
